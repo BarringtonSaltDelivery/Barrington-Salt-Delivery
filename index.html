@@ -15,18 +15,20 @@
     header {
       text-align: center;
       padding: 40px 20px;
-      background: #111;
+      background: #000;
       border-bottom: 4px solid #c00000;
     }
     header img {
-      max-width: 100%;
+      max-width: 200px;    /* Maximum logo width */
+      width: 50%;          /* Responsive size */
       height: auto;
       margin-bottom: 20px;
+      filter: invert(1);    /* Invert colors for white logo */
     }
     h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
-      color: #c00000;
+      color: #ffffff;
     }
     h2 {
       color: #c00000;
@@ -61,8 +63,9 @@
       text-align: center;
       padding: 40px 20px;
       margin-top: 40px;
-      background: #111;
+      background: #000;
       border-top: 4px solid #c00000;
+      color: #fff;
     }
   </style>
 </head>
@@ -70,8 +73,8 @@
 <body>
 
   <header>
-    <!-- Logo loaded directly from GitHub -->
-    <img src="https://raw.githubusercontent.com/BarringtonSaltDelivery/Barrington-Salt-Delivery/main/LOGO1.png" 
+    <!-- Logo loaded directly from GitHub, inverted to white -->
+    <img src="https://raw.githubusercontent.com/BarringtonSaltDelivery/Barrington-Salt-Delivery/main/LOGO1.PNG" 
          alt="Barrington Salt Delivery Logo" 
          onerror="this.style.display='none';" />
 
