@@ -20,36 +20,32 @@
       border-bottom: 4px solid #c00000;
     }
 
-    /* Logo styles */
     header img {
-      max-width: 200px;  
-      width: 40%;        
+      max-width: 200px;
+      width: 40%;
       height: auto;
       margin-bottom: 20px;
-      filter: invert(1);  
+      filter: invert(1);
       display: block;
       margin-left: auto;
       margin-right: auto;
       transition: transform 0.3s ease, filter 0.3s ease, opacity 1s ease;
       cursor: pointer;
       animation: glowPulse 2.5s infinite alternate, fadeIn 1.5s ease forwards;
-      opacity: 0; /* start invisible for fade-in */
+      opacity: 0;
     }
 
-    /* Logo hover effect */
     header img:hover {
-      transform: scale(1.1);              
-      filter: invert(1) brightness(1.5);  
+      transform: scale(1.1);
+      filter: invert(1) brightness(1.5);
     }
 
-    /* Continuous subtle glow animation */
     @keyframes glowPulse {
       0% { filter: invert(1) brightness(1); }
       50% { filter: invert(1) brightness(1.1); }
       100% { filter: invert(1) brightness(1); }
     }
 
-    /* Fade-in effect */
     @keyframes fadeIn {
       to { opacity: 1; }
     }
@@ -59,7 +55,7 @@
       margin-bottom: 10px;
       color: #ffffff;
       opacity: 0;
-      animation: fadeIn 1.5s ease forwards 0.5s; /* fade in after logo */
+      animation: fadeIn 1.5s ease forwards 0.5s;
     }
 
     h2 {
@@ -73,7 +69,6 @@
       padding: 20px;
     }
 
-    /* Buttons */
     .cta-buttons a {
       display: inline-block;
       margin: 10px;
@@ -85,17 +80,15 @@
       border-radius: 8px;
       transition: all 0.3s ease;
       animation: buttonGlow 2s infinite alternate, fadeIn 1.5s ease forwards;
-      opacity: 0; /* start invisible for fade-in */
+      opacity: 0;
     }
 
-    /* Button hover effect */
     .cta-buttons a:hover {
-      background-color: #ff1a1a;             
-      transform: translateY(-3px);           
-      box-shadow: 0 4px 8px rgba(255,0,0,0.5); 
+      background-color: #ff1a1a;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(255,0,0,0.5);
     }
 
-    /* Subtle button glow animation */
     @keyframes buttonGlow {
       0% { box-shadow: 0 0 5px rgba(255,0,0,0.3); }
       50% { box-shadow: 0 0 15px rgba(255,0,0,0.5); }
@@ -123,26 +116,23 @@
       color: #fff;
     }
 
-    /* Responsive adjustments */
     @media screen and (max-width: 600px) {
       header img {
-        width: 60%;       
-        max-width: 150px; 
+        width: 60%;
+        max-width: 150px;
       }
       h1 {
-        font-size: 2rem;  
+        font-size: 2rem;
       }
     }
   </style>
 </head>
 
 <body>
-
   <header>
     <img src="https://raw.githubusercontent.com/BarringtonSaltDelivery/Barrington-Salt-Delivery/main/logo1.png" 
          alt="Barrington Salt Delivery Logo" 
          onerror="this.style.display='none';" />
-
     <h1>BSD - Barrington Salt Delivery</h1>
     <p>Water softener salt delivered, and loaded into your brine tank — Simple. Affordable. Convenient.</p>
     <div class="cta-buttons">
@@ -194,6 +184,5 @@
     <p>• Text Scheduling • Nights & Weekends Delivery Only • Accept Cash, Zelle, Paypal & Venmo.</p>
     <p><em>“Full Tank, Soft Water, Zero Hassle — A Text Away.”</em></p>
   </footer>
-
 </body>
 </html>
