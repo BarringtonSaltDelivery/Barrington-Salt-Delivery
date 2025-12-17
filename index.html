@@ -25,10 +25,10 @@
       border-bottom: 4px solid #c00000;
     }
 
-    /* LOGO — TRANSPARENT, NO WHITE BOX, PULSING GLOW */
+    /* LOGO — TRANSPARENT, NO WHITE BOX, PULSING GLOW, 25% bigger */
     header img {
-      max-width: 275px;
-      width: 50%;
+      max-width: 344px; /* 275px + 25% */
+      width: 62.5%;     /* 50% + 25% */
       height: auto;
       margin-bottom: 20px;
       display: block;
@@ -119,33 +119,34 @@
       color: #fff;
     }
 
-    /* PAYMENT ICONS */
+    /* PAYMENT ICONS FIXED */
     .payment-icons {
       margin-top: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 16px;
-      opacity: 0.85;
+      gap: 12px;
       flex-wrap: wrap;
+      opacity: 0.9;
+      font-size: 0.95rem;
     }
 
     .payment-icons span {
-      font-size: 0.9rem;
       color: #ccc;
       margin-right: 6px;
+      font-weight: bold;
     }
 
     .payment-icons img {
-      height: 28px;
+      height: 32px;
       width: auto;
-      filter: invert(1);
+      display: inline-block;
     }
 
     @media screen and (max-width: 600px) {
       header img {
         width: 75%;
-        max-width: 200px;
+        max-width: 250px; /* increased 25% */
         filter: drop-shadow(0 0 5px rgba(255,0,0,0.6));
       }
 
@@ -159,7 +160,7 @@
 <body>
 
   <header>
-    <img src="LOGOTEST.png"
+    <img src="LOGO 7.png"
          alt="Barrington Salt Delivery Logo"
          loading="eager" />
 
@@ -217,10 +218,10 @@
 
     <div class="payment-icons">
       <span>We accept:</span>
-      <img src="icons/cash.svg" alt="Cash">
-      <img src="icons/zelle.svg" alt="Zelle">
-      <img src="icons/paypal.svg" alt="PayPal">
-      <img src="icons/venmo.svg" alt="Venmo">
+      <img src="icons/cash.png" alt="Cash">
+      <img src="icons/zelle.png" alt="Zelle">
+      <img src="icons/paypal.png" alt="PayPal">
+      <img src="icons/venmo.png" alt="Venmo">
     </div>
 
     <p style="margin-top:15px;">
