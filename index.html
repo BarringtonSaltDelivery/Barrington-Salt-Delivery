@@ -25,18 +25,33 @@
       border-bottom: 4px solid #c00000;
     }
 
-    /* LOGO — TRANSPARENT, NO WHITE BOX, PULSING GLOW, 25% bigger */
+    /* LOGO — 25% LARGER AGAIN, ZERO OUTLINES */
     header img {
-      max-width: 344px; /* 275px + 25% */
-      width: 62.5%;     /* 50% + 25% */
+      max-width: 430px;        /* 344px + 25% */
+      width: 78%;              /* 62.5% + 25% */
       height: auto;
       margin-bottom: 20px;
       display: block;
       background: transparent;
+
+      /* 🚫 KILL ALL BOX / RED OUTLINES */
+      outline: none !important;
+      border: none !important;
+      box-shadow: none !important;
+      -webkit-tap-highlight-color: transparent;
+
       transition: transform 0.3s ease;
       animation: fadeIn 1.5s ease forwards, pulseGlow 2.5s infinite alternate;
       opacity: 0;
       filter: drop-shadow(0 0 6px rgba(255,0,0,0.6));
+    }
+
+    /* Remove focus / active states */
+    header img:focus,
+    header img:active {
+      outline: none !important;
+      border: none !important;
+      box-shadow: none !important;
     }
 
     header img:hover {
@@ -62,7 +77,6 @@
     h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
-      color: #fff;
       opacity: 0;
       animation: fadeIn 1.5s ease forwards 0.4s;
     }
@@ -106,20 +120,14 @@
       border: 1px solid #333;
     }
 
-    ul li {
-      margin-bottom: 10px;
-    }
-
     footer {
       text-align: center;
       padding: 40px 20px;
       margin-top: 40px;
       background: #000;
       border-top: 4px solid #c00000;
-      color: #fff;
     }
 
-    /* PAYMENT ICONS FIXED */
     .payment-icons {
       margin-top: 20px;
       display: flex;
@@ -127,27 +135,16 @@
       align-items: center;
       gap: 12px;
       flex-wrap: wrap;
-      opacity: 0.9;
-      font-size: 0.95rem;
-    }
-
-    .payment-icons span {
-      color: #ccc;
-      margin-right: 6px;
-      font-weight: bold;
     }
 
     .payment-icons img {
       height: 32px;
-      width: auto;
-      display: inline-block;
     }
 
     @media screen and (max-width: 600px) {
       header img {
-        width: 75%;
-        max-width: 250px; /* increased 25% */
-        filter: drop-shadow(0 0 5px rgba(255,0,0,0.6));
+        width: 85%;
+        max-width: 312px; /* 250px + 25% */
       }
 
       h1 {
@@ -159,75 +156,58 @@
 
 <body>
 
-  <header>
-    <img src="LOGO 7.png"
-         alt="Barrington Salt Delivery Logo"
-         loading="eager" />
+<header>
+  <img src="LOGO 7.png"
+       alt="Barrington Salt Delivery Logo"
+       loading="eager" />
 
-    <h1>BSD - Barrington Salt Delivery</h1>
-    <p>Water softener salt delivered and loaded into your brine tank — Simple. Affordable. Convenient.</p>
+  <h1>BSD - Barrington Salt Delivery</h1>
+  <p>Water softener salt delivered and loaded into your brine tank — Simple. Affordable. Convenient.</p>
 
-    <div class="cta-buttons">
-      <a href="sms:+13128411154">Text us now to schedule your delivery!</a>
-    </div>
-  </header>
+  <div class="cta-buttons">
+    <a href="sms:+13128411154">Text us now to schedule your delivery!</a>
+  </div>
+</header>
 
-  <div class="container">
+<div class="container">
 
-    <div class="section">
-      <h2>How It Works</h2>
-      <ol>
-        <li><strong>Text:</strong> Name, address, and preferred evening.</li>
-        <li><strong>Deliver:</strong> High-quality softener salt.</li>
-        <li><strong>Replenish:</strong> We fill your brine tank.</li>
-        <li><strong>Clean Up:</strong> Packaging removed. Clean space.</li>
-      </ol>
-    </div>
-
-    <div class="section">
-      <h2>Why Choose Us</h2>
-      <ul>
-        <li>Text-only scheduling — fast & easy</li>
-        <li>No heavy lifting</li>
-        <li>Nights & weekends delivery</li>
-        <li>Your hometown provider — 60010</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>What Customers Say</h2>
-      <p>“Brit — No more carrying heavy bags.”</p>
-      <p>“Andrea — Super convenient.”</p>
-      <p>“Mary — One text and done.”</p>
-      <p>“Salena — Evening delivery is perfect.”</p>
-    </div>
-
-    <div class="section" style="text-align:center;">
-      <h2>Ready for a Full Tank & Zero Hassle?</h2>
-      <p>Text (312) 841-1154 to schedule your delivery.</p>
-      <div class="cta-buttons">
-        <a href="sms:+13128411154">Text Us</a>
-      </div>
-    </div>
-
+  <div class="section">
+    <h2>How It Works</h2>
+    <ol>
+      <li><strong>Text:</strong> Name, address, and preferred evening.</li>
+      <li><strong>Deliver:</strong> High-quality softener salt.</li>
+      <li><strong>Replenish:</strong> We fill your brine tank.</li>
+      <li><strong>Clean Up:</strong> Packaging removed. Clean space.</li>
+    </ol>
   </div>
 
-  <footer>
-    <p>Water Softener Salt Delivery & Brine Tank Replenishments — Barrington, IL (60010)</p>
-    <p>• Text Scheduling • Nights & Weekends</p>
+  <div class="section">
+    <h2>Why Choose Us</h2>
+    <ul>
+      <li>Text-only scheduling — fast & easy</li>
+      <li>No heavy lifting</li>
+      <li>Nights & weekends delivery</li>
+      <li>Your hometown provider — 60010</li>
+    </ul>
+  </div>
 
-    <div class="payment-icons">
-      <span>We accept:</span>
-      <img src="icons/cash.png" alt="Cash">
-      <img src="icons/zelle.png" alt="Zelle">
-      <img src="icons/paypal.png" alt="PayPal">
-      <img src="icons/venmo.png" alt="Venmo">
-    </div>
+</div>
 
-    <p style="margin-top:15px;">
-      <em>“Simple. Affordable. Convenient.”</em>
-    </p>
-  </footer>
+<footer>
+  <p>Water Softener Salt Delivery & Brine Tank Replenishments — Barrington, IL (60010)</p>
+
+  <div class="payment-icons">
+    <span>We accept:</span>
+    <img src="icons/cash.png" alt="Cash">
+    <img src="icons/zelle.png" alt="Zelle">
+    <img src="icons/paypal.png" alt="PayPal">
+    <img src="icons/venmo.png" alt="Venmo">
+  </div>
+
+  <p style="margin-top:15px;">
+    <em>“Simple. Affordable. Convenient.”</em>
+  </p>
+</footer>
 
 </body>
 </html>
