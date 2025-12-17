@@ -25,12 +25,12 @@
       border-bottom: 4px solid #c00000;
     }
 
-    /* LOGO — TRANSPARENT, NO WHITE BOX, 25% LARGER, PULSING GLOW */
+    /* LOGO — TRANSPARENT, NO WHITE BOX, PULSING GLOW */
     header img {
-      max-width: 275px; /* increased by 25% */
-      width: 50%;       /* increased by 25% */
+      max-width: 275px;
+      width: 50%;
       height: auto;
-      margin: 0 0 20px 0;
+      margin-bottom: 20px;
       display: block;
       background: transparent;
       transition: transform 0.3s ease;
@@ -50,15 +50,13 @@
     }
 
     @keyframes pulseGlow {
-      0% { filter: drop-shadow(0 0 6px rgba(255,0,0,0.6)); }
+      0%, 100% { filter: drop-shadow(0 0 6px rgba(255,0,0,0.6)); }
       50% { filter: drop-shadow(0 0 12px rgba(255,0,0,0.8)); }
-      100% { filter: drop-shadow(0 0 6px rgba(255,0,0,0.6)); }
     }
 
     @keyframes pulseGlowHover {
-      0% { filter: drop-shadow(0 0 10px rgba(255,0,0,0.8)); }
+      0%, 100% { filter: drop-shadow(0 0 10px rgba(255,0,0,0.8)); }
       50% { filter: drop-shadow(0 0 16px rgba(255,0,0,1)); }
-      100% { filter: drop-shadow(0 0 10px rgba(255,0,0,0.8)); }
     }
 
     h1 {
@@ -146,7 +144,7 @@
 
     @media screen and (max-width: 600px) {
       header img {
-        width: 75%; /* scaled proportionally for mobile */
+        width: 75%;
         max-width: 200px;
         filter: drop-shadow(0 0 5px rgba(255,0,0,0.6));
       }
@@ -161,7 +159,7 @@
 <body>
 
   <header>
-    <img src="LOGO-8-transparent.png.png"
+    <img src="LOGOTEST.png"
          alt="Barrington Salt Delivery Logo"
          loading="eager" />
 
