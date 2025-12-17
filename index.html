@@ -15,27 +15,33 @@
     }
 
     header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 40px 20px;
+      padding: 60px 20px; /* slightly taller to center logo nicely */
       background: #000;
       border-bottom: 4px solid #c00000;
     }
 
-    /* LOGO — TRANSPARENT, NO WHITE BOX */
+    /* LOGO — TRANSPARENT, NO WHITE BOX, 25% LARGER, GLOW EFFECT */
     header img {
-      max-width: 220px;
-      width: 40%;
+      max-width: 275px; /* increased by 25% */
+      width: 50%;       /* increased by 25% */
       height: auto;
-      margin: 0 auto 20px;
+      margin: 0 0 20px 0;
       display: block;
       background: transparent;
-      transition: transform 0.3s ease, opacity 1s ease;
+      transition: transform 0.3s ease, opacity 1s ease, filter 0.3s ease;
       animation: fadeIn 1.5s ease forwards;
       opacity: 0;
+      filter: drop-shadow(0 0 6px rgba(255,0,0,0.6)); /* subtle glow */
     }
 
     header img:hover {
       transform: scale(1.08);
+      filter: drop-shadow(0 0 10px rgba(255,0,0,0.8)); /* stronger glow on hover */
     }
 
     @keyframes fadeIn {
@@ -127,8 +133,9 @@
 
     @media screen and (max-width: 600px) {
       header img {
-        width: 60%;
-        max-width: 160px;
+        width: 75%; /* scaled proportionally for mobile */
+        max-width: 200px;
+        filter: drop-shadow(0 0 5px rgba(255,0,0,0.6));
       }
 
       h1 {
