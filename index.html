@@ -101,8 +101,15 @@
       border: 1px solid #333;
     }
 
-    ul li {
-      margin-bottom: 10px;
+    /* Unified list spacing for both ol and ul */
+    .section ol li,
+    .section ul li {
+      margin-bottom: 15px;
+    }
+
+    /* Ensure ul padding matches ol style */
+    .section ul {
+      padding-left: 20px;
     }
 
     footer {
