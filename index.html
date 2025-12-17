@@ -20,12 +20,12 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 60px 20px; /* slightly taller to center logo nicely */
+      padding: 60px 20px;
       background: #000;
       border-bottom: 4px solid #c00000;
     }
 
-    /* LOGO — TRANSPARENT, NO WHITE BOX, 25% LARGER, GLOW EFFECT */
+    /* LOGO — TRANSPARENT, NO WHITE BOX, 25% LARGER, PULSING GLOW */
     header img {
       max-width: 275px; /* increased by 25% */
       width: 50%;       /* increased by 25% */
@@ -33,19 +33,32 @@
       margin: 0 0 20px 0;
       display: block;
       background: transparent;
-      transition: transform 0.3s ease, opacity 1s ease, filter 0.3s ease;
-      animation: fadeIn 1.5s ease forwards;
+      transition: transform 0.3s ease;
+      animation: fadeIn 1.5s ease forwards, pulseGlow 2.5s infinite alternate;
       opacity: 0;
-      filter: drop-shadow(0 0 6px rgba(255,0,0,0.6)); /* subtle glow */
+      filter: drop-shadow(0 0 6px rgba(255,0,0,0.6));
     }
 
     header img:hover {
       transform: scale(1.08);
-      filter: drop-shadow(0 0 10px rgba(255,0,0,0.8)); /* stronger glow on hover */
+      filter: drop-shadow(0 0 10px rgba(255,0,0,0.8));
+      animation: pulseGlowHover 1.5s infinite alternate;
     }
 
     @keyframes fadeIn {
       to { opacity: 1; }
+    }
+
+    @keyframes pulseGlow {
+      0% { filter: drop-shadow(0 0 6px rgba(255,0,0,0.6)); }
+      50% { filter: drop-shadow(0 0 12px rgba(255,0,0,0.8)); }
+      100% { filter: drop-shadow(0 0 6px rgba(255,0,0,0.6)); }
+    }
+
+    @keyframes pulseGlowHover {
+      0% { filter: drop-shadow(0 0 10px rgba(255,0,0,0.8)); }
+      50% { filter: drop-shadow(0 0 16px rgba(255,0,0,1)); }
+      100% { filter: drop-shadow(0 0 10px rgba(255,0,0,0.8)); }
     }
 
     h1 {
