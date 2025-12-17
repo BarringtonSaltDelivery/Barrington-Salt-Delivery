@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -25,11 +25,10 @@
       width: 40%;
       height: auto;
       margin-bottom: 20px;
-      filter: invert(1);
       display: block;
       margin-left: auto;
       margin-right: auto;
-      transition: transform 0.3s ease, filter 0.3s ease, opacity 1s ease;
+      transition: transform 0.3s ease, opacity 1s ease;
       cursor: pointer;
       animation: glowPulse 2.5s infinite alternate, fadeIn 1.5s ease forwards;
       opacity: 0;
@@ -37,13 +36,12 @@
 
     header img:hover {
       transform: scale(1.1);
-      filter: invert(1) brightness(1.5);
     }
 
     @keyframes glowPulse {
-      0% { filter: invert(1) brightness(1); }
-      50% { filter: invert(1) brightness(1.1); }
-      100% { filter: invert(1) brightness(1); }
+      0% { filter: brightness(1); }
+      50% { filter: brightness(1.1); }
+      100% { filter: brightness(1); }
     }
 
     @keyframes fadeIn {
@@ -166,7 +164,7 @@
       <h2>What Customers Say</h2>
       <p>“Brit - No more trying to carry heavy bags. Mark did everything. Truly, in and out.”</p>
       <p>“Andrea - The service is really convenient and the water softener is always full now.”</p>
-      <p>“Mary - I texted once, and Mark was very responsive...a great home service.”p>
+      <p>“Mary - I texted once, and Mark was very responsive...a great home service.”</p>
       <p>“Salena - I really like the evening availability because it fits my schedule. It is one less thing to have to do.”</p>
     </div>
 
